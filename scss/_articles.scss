@@ -1,0 +1,130 @@
+.articles {
+  background: #fff;
+
+  // .articles__wrapper
+  &__wrapper {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  // .articles__title
+  &__title {}
+
+  // .articles__block
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px 25px;
+    width: 100%;
+
+    @include mq(700) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    ;
+  }
+
+  // .articles__article
+  &__article {
+    aspect-ratio: 5/4;
+    background: center/cover no-repeat;
+
+    &:nth-of-type(1) {
+      background-image: url("../images/articles/bg1.png");
+    }
+
+    &:nth-of-type(2) {
+      background-image: url("../images/articles/bg2.png");
+    }
+
+    &:nth-of-type(3) {
+      background-image: url("../images/articles/bg3.png");
+    }
+
+    &:nth-of-type(4) {
+      background-image: url("../images/articles/bg4.png");
+    }
+  }
+}
+
+.article {
+  padding: 8% 10%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 20px;
+
+  // .article__info
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  // .article__type
+  &__type {
+    font-family: "DM Sans";
+    font-size: 12px;
+    font-weight: 500;
+    color: $green;
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    gap: 6px;
+  }
+
+  // .article__date
+  &__date {
+    font-family: "mulish";
+    font-size: 14px;
+    color: #fff;
+  }
+
+  // .article__title
+  &__title {
+    font-family: "mulish";
+    font-weight: 700;
+    font-size: 3.2vw;
+    color: #fff;
+
+    @media (min-width: 1170px) {
+      font-size: 39px;
+    }
+
+    @include mq(700) {
+      font-size: 30px;
+    }
+
+    @include mq(500) {
+      font-size: 22px;
+    }
+  }
+
+  // .article__link
+  &__link {
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    align-self: start;
+    padding: 4px 8px 4px 0;
+
+    &:visited {
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      transform: scale(1.2) translateX(10%);
+    }
+  }
+}

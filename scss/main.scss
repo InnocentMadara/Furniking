@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Mulish:wght@400;600;700;800&family=Rubik:wght@400;500&display=swap");
+
+@import "./normalize";
+@import "./mixins";
+@import "./vars";
+@import "./common";
+
+@import "./header";
+
+@import "./hero";
+@import "./trending";
+@import "./special-offer";
+@import "./reviews";
+@import "./articles";
+
+@import "./footer";
+
+body {
+  background: #363636;
+}
