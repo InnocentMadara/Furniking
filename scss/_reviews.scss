@@ -1,0 +1,106 @@
+.reviews {
+  background: #fff;
+
+  // .reviews__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+  }
+
+  // .reviews__title
+  &__title {}
+
+  // .reviews__slider
+  &__slider {
+    display: flex;
+    align-items: center;
+  }
+
+  // .reviews__button
+  &__button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 50px;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #f1f1f1;
+    }
+  }
+
+  // .reviews__button-left
+  &__button-left {}
+
+  // .reviews__block
+  &__block {
+    overflow: hidden;
+  }
+
+  // .reviews__list
+  &__list {
+    display: flex;
+    transition: transform 0.3s;
+  }
+
+  // .reviews__review
+  &__review {
+    min-width: 100%;
+  }
+
+  // .reviews__button-right
+  &__button-right {}
+}
+
+.review {
+
+  // .review__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 74px 30px 46px;
+    margin-top: 80px;
+    background: #F8FAFB;
+    border-radius: 8px;
+  }
+
+  // .review__image
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 88px;
+    height: 88px;
+    border-radius: 1000px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  // .review__text
+  &__text {
+    font-family: "DM Sans";
+    font-size: 16px;
+    color: #515151;
+    text-align: center;
+    max-width: 560px;
+    margin-bottom: 30px;
+  }
+
+  // .review__name
+  &__name {
+    font-family: 'mulish';
+    font-size: 24px;
+    color: $darkgrey;
+  }
+}
