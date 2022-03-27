@@ -11,7 +11,9 @@
   }
 
   // .special-offer__title
-  &__title {}
+  &__title {
+    color: $green;
+  }
 
   // .special-offer__block
   &__block {
