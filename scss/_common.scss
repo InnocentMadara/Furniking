@@ -8,7 +8,7 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: inherit;
+    // color: inherit;
   }
 }
 
@@ -39,6 +39,21 @@ h2 {
 .container {
   max-width: 1170px;
   margin: 0 auto;
+}
+
+.logo{
+  display: flex;
+  align-items: flex-end;
+  font-family: "rubik";
+  font-weight: 500;
+  font-size: 24px;
+  color: $darkgrey;
+  &:visited {
+    color: $darkgrey;
+  }
+  p {
+    color: inherit;
+  }
 }
 
 .dropdown-menu {

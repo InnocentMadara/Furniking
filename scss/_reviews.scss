@@ -16,6 +16,8 @@
   &__slider {
     display: flex;
     align-items: center;
+    max-width: 100%;
+    position: relative;
   }
 
   // .reviews__button
@@ -23,16 +25,38 @@
     cursor: pointer;
     background: transparent;
     border: 0;
-    padding: 50px;
+    padding: 20px;
+    margin: 15px;
     transition: background 0.3s;
+    border-radius: 4px;
 
     &:hover {
       background: #f1f1f1;
     }
+    @include mq(650){
+      position: absolute;
+      z-index: 100;
+      opacity: 0.55;
+      padding: 50px 30px;
+      margin: 0;
+    };
   }
 
   // .reviews__button-left
-  &__button-left {}
+  &__button-left {
+    @include mq(650){
+      left: 0;
+      padding-left: 5px;
+    };
+  }
+  
+  // .reviews__button-right
+  &__button-right {
+    @include mq(650){
+      right: 0;
+      padding-right: 5px;
+    };
+  }
 
   // .reviews__block
   &__block {
@@ -49,9 +73,6 @@
   &__review {
     min-width: 100%;
   }
-
-  // .reviews__button-right
-  &__button-right {}
 }
 
 .review {

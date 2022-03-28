@@ -2,55 +2,124 @@
   background: #fff;
 
   // .footer__top
-  &__top {}
+  &__top{
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #969696;
+      opacity: 0.2;
+    }
+  }
 
   // .footer__top-wrapper
   &__top-wrapper {
     display: flex;
+    padding: 40px 20px;
+    @include mq(850){
+      flex-direction: column;
+      gap: 20px;
+    };
   }
 
   // .footer__about
   &__about {
     flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 30px;
   }
 
   // .footer__logo
   &__logo {}
 
   // .footer__text
-  &__text {}
+  &__text {
+    font-family: 'rubik';
+    color: $darkgrey;
+    font-size: 16px;
+    line-height: 200%;
+  }
 
   // .footer__socials
-  &__socials {}
+  &__socials {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  // .footer__social-link
+  &__social-link {
+    
+    img{
+      display: block;
+    }
+  }
 
   // .footer__links
   &__links {
-    flex: 0 0 35%;
+    flex: 0 0 65%;
     display: grid;
-    grid-template-columns: repeat(3, 1frs);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat();
+    gap: 15px 10px;
+    justify-content: space-between;
   }
 
   // .footer__heading
-  &__heading {}
-
-  // .footer__social-link
-  &__social-link {}
+  &__heading {
+    font-family: "rubik";
+    color: $darkgrey;
+    font-size: 18px;
+    font-weight: 500;
+  }
 
   // .footer__link
-  &__link {}
+  &__link {
+    font-family: "rubik";
+    color: $darkgrey;
+    font-size: 18px;
+    @include mq(850){
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    };
+  }
 
   // .footer__bottom
   &__bottom {}
 
   // .footer__bottom-wrapper
-  &__bottom-wrapper {}
+  &__bottom-wrapper {
+    padding: 30px 20px;
+    display: flex;
+    gap: 50px;
+    @include mq(550){
+      &>*:first-child{
+        flex: 0 0 100%;
+      }
+      flex-wrap: wrap
+    };
+    &>*{
+      font-family: 'rubik';
+      font-size: 14px;
+      color: $darkgrey;
+    }
+  }
 
   // .footer__copyrights
-  &__copyrights {}
+  &__copyrights {
+  }
 
   // .footer__privacy
-  &__privacy {}
+  &__privacy {
+    margin-left: auto;
+  }
 
   // .footer__security
   &__security {}

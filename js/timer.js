@@ -24,7 +24,7 @@ document.querySelectorAll('.timer').forEach(timer => {
         } else {
           timer.querySelector(".timer__hrs").innerText = "59";
 
-          timer.querySelector("timer__days").innerText = (+timer.querySelector("timer__days").innerText - 1) + "";
+          timer.querySelector(".timer__days").innerText = (+timer.querySelector(".timer__days").innerText - 1) + "";
 
         }
 

@@ -5,7 +5,7 @@
     font-family: "rubik";
     font-weight: 400;
     font-style: normal;
-    color: $white;
+    color: #fff;
     background: $green;
   }
 
@@ -31,45 +31,17 @@
 
   // .header__text
   &__text {
-    @include mq(550) {
+    @include mq(400) {
       display: none;
     }
   }
 
-  // .header__lang
-  &__lang {
+  // .header__login
+  &__login{
     margin-left: auto;
-    color: inherit;
-    background: transparent;
-    border: 0;
-    position: relative;
-    margin-right: 10px;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: -12px;
-      width: 8px;
-      height: 2px;
-      background: #fff;
-      border-radius: 100px;
-    }
-    &::before {
-      transform: rotate(45deg);
-    }
-    &::after {
-      transform: translateX(4.5px) rotate(-45deg);
-    }
-  }
-
-  // .header__lang-option
-  &__lang-option {
-    font-family: "rubik";
-    background: $green;
-    display: none;
-    &[data-selected] {
-      display: block;
+    color: #fff;
+    &:visited{
+      color: inherit;
     }
   }
 
@@ -98,22 +70,9 @@
   // .header__logo
   &__logo {
     grid-area: logo;
-
     margin-right: 120px;
-    display: flex;
-    align-items: flex-end;
-    font-family: "rubik";
-    font-weight: 500;
-    font-size: 24px;
-    color: $darkgrey;
     @include mq(800) {
       margin-right: 0;
-    }
-    &:visited {
-      color: $darkgrey;
-    }
-    p {
-      color: inherit;
     }
   }
 
@@ -312,6 +271,7 @@
     display: inline-block;
     padding: 25px 30px;
     transition: background 0.3s;
+    color: $darkgrey;
     @include mq(976) {
       width: 100%;
       text-align: center;
